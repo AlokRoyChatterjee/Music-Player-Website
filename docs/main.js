@@ -60,7 +60,7 @@ function loadTrack(track_index) {
   curr_track.src = track_list[track_index].path;
   curr_track.load();
 
-  songimage.style.backgroundImage = "url('./images/1.jpg')";
+  songimage.style.backgroundImage = "url('1.jpg')";
   nameofsong.textContent = track_list[track_index].name;
   singer.textContent = track_list[track_index].artist;
   songinplay.textContent = "PLAYING " + (track_index + 1) + " OF " + track_list.length;
