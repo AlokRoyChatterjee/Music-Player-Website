@@ -23,19 +23,19 @@ let track_list = [
   {
     name: "Electric Guitar Song",
     artist: "Singer",
-    image: "./images/1.jpg",
+    image: "https://images.pexels.com/photos/2264753/pexels-photo-2264753.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=250&w=250",
     path: "https://files.freemusicarchive.org/storage-freemusicarchive-org/music/WFMU/Broke_For_Free/Directionless_EP/Broke_For_Free_-_01_-_Night_Owl.mp3"
   },
   {
     name: "Energy Pop Song",
     artist: "Singer",
-    image: "./images/2.jpg",
+    image: "https://images.pexels.com/photos/3100835/pexels-photo-3100835.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=250&w=250",
     path: "https://files.freemusicarchive.org/storage-freemusicarchive-org/music/no_curator/Tours/Enthusiast/Tours_-_01_-_Enthusiast.mp3"
   },
   {
     name: "Other Song",
     artist: "Singer",
-    image: "./images/3.jpg",
+    image: "https://images.pexels.com/photos/1717969/pexels-photo-1717969.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=250&w=250",
     path: "https://files.freemusicarchive.org/storage-freemusicarchive-org/music/ccCommunity/Chad_Crouch/Arps/Chad_Crouch_-_Shipping_Lanes.mp3",
   },
 ];
@@ -59,7 +59,7 @@ function loadTrack(track_index) {
   resetValues();
   curr_track.src = track_list[track_index].path;
   curr_track.load();
-
+  songimage.style.backgroundImage = "url(" + track_list[track_index].image + ")";
   nameofsong.textContent = track_list[track_index].name;
   singer.textContent = track_list[track_index].artist;
   songinplay.textContent = "PLAYING " + (track_index + 1) + " OF " + track_list.length;
